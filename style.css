@@ -15,6 +15,7 @@ body{
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   color:var(--text);
 
+  /* Galaxy-ish glow background */
   background:
     radial-gradient(900px 600px at 20% 0%, rgba(139,182,255,.22), transparent 55%),
     radial-gradient(700px 500px at 80% 10%, rgba(0,217,255,.14), transparent 55%),
@@ -145,13 +146,27 @@ a{ color: var(--link); }
   border-radius: 10px;
 }
 
-/* PROJECT GRID */
+/* =========================
+   GRIDS
+   ========================= */
+
+/* Default grid helper (3 columns on desktop) */
 .grid{
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
+  align-items: start;
 }
 
+/* Projects: force side-by-side on desktop (wins over any other grid rules) */
+#projects .projects-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+/* Tiles (simple project cards) */
 .tile{
   padding: 14px;
   border-radius: 16px;
@@ -176,53 +191,9 @@ a{ color: var(--link); }
   font-size: 13px;
 }
 
-/* SKILLS */
-.chips{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-.chip{
-  padding: 8px 12px;
-  border-radius: 999px;
-  border:1px solid var(--line);
-  background: rgba(0,0,0,.18);
-}
-
-/* CONTACT */
-.contact-grid{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-}
-
-.label{
-  margin:0 0 6px;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-/* FOOTER */
-.foot{
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 18px 22px 30px;
-  color: var(--muted);
-  border-top: 1px solid var(--line);
-}
-
-/* MOBILE */
-@media (max-width: 700px){
-  .grid{ grid-template-columns: 1fr; }
-  .contact-grid{ grid-template-columns: 1fr; }
-  h1{ font-size: 32px; }
-}
-
-/* Embedded project card (like the example) */
-.projects-grid{
-  gap: 16px;
-}
+/* =========================
+   EMBEDDED PROJECT CARD
+   ========================= */
 
 .pCard{
   border:1px solid var(--line);
@@ -287,14 +258,62 @@ a{ color: var(--link); }
   gap: 10px;
   flex-wrap:wrap;
 }
-/* Keep projects in 3 columns until much smaller screens */
+
+/* =========================
+   SKILLS
+   ========================= */
+
+.chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.chip{
+  padding: 8px 12px;
+  border-radius: 999px;
+  border:1px solid var(--line);
+  background: rgba(0,0,0,.18);
+}
+
+/* CONTACT */
+.contact-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.label{
+  margin:0 0 6px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* FOOTER */
+.foot{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 18px 22px 30px;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+/* Tablets */
 @media (max-width: 860px){
-  #projects .grid{
-    grid-template-columns: repeat(2, 1fr);
+  #projects .projects-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* Phones */
 @media (max-width: 600px){
-  #projects .grid{
+  #projects .projects-grid{
     grid-template-columns: 1fr;
   }
+  .contact-grid{ grid-template-columns: 1fr; }
+  h1{ font-size: 32px; }
 }
