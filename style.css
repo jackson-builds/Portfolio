@@ -213,7 +213,7 @@ a{ color: var(--link); }
 }
 
 /* MOBILE */
-@media (max-width: 860px){
+@media (max-width: 700px){
   .grid{ grid-template-columns: 1fr; }
   .contact-grid{ grid-template-columns: 1fr; }
   h1{ font-size: 32px; }
@@ -286,4 +286,15 @@ a{ color: var(--link); }
   display:flex;
   gap: 10px;
   flex-wrap:wrap;
+}
+/* Keep projects in 3 columns until much smaller screens */
+@media (max-width: 860px){
+  #projects .grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px){
+  #projects .grid{
+    grid-template-columns: 1fr;
+  }
 }
