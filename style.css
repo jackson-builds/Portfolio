@@ -14,12 +14,59 @@ body{
   margin:0;
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   color:var(--text);
+  overflow-x:hidden;
 
   background:
     radial-gradient(900px 600px at 20% 0%, rgba(139,182,255,.22), transparent 55%),
     radial-gradient(700px 500px at 80% 10%, rgba(0,217,255,.14), transparent 55%),
     radial-gradient(900px 600px at 50% 110%, rgba(120,255,205,.10), transparent 60%),
     var(--bg);
+}
+
+/* ===== GALAXY STARFIELD ===== */
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:-20%;
+  z-index:-2;
+
+  background:
+    radial-gradient(900px 600px at 15% 10%, rgba(120,170,255,.25), transparent 60%),
+    radial-gradient(800px 520px at 75% 15%, rgba(0,217,255,.18), transparent 55%),
+    radial-gradient(900px 600px at 55% 85%, rgba(180,120,255,.15), transparent 60%),
+    radial-gradient(700px 500px at 90% 70%, rgba(120,255,205,.12), transparent 55%);
+
+  filter: blur(12px);
+}
+
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+
+  background-image:
+    radial-gradient(1px 1px at 12% 18%, rgba(255,255,255,.75) 99%, transparent),
+    radial-gradient(1px 1px at 22% 78%, rgba(255,255,255,.55) 99%, transparent),
+    radial-gradient(1px 1px at 35% 30%, rgba(255,255,255,.65) 99%, transparent),
+    radial-gradient(1px 1px at 45% 65%, rgba(255,255,255,.45) 99%, transparent),
+    radial-gradient(1px 1px at 58% 22%, rgba(255,255,255,.70) 99%, transparent),
+    radial-gradient(1px 1px at 66% 80%, rgba(255,255,255,.55) 99%, transparent),
+    radial-gradient(1px 1px at 77% 40%, rgba(255,255,255,.60) 99%, transparent),
+    radial-gradient(1px 1px at 88% 15%, rgba(255,255,255,.50) 99%, transparent),
+    radial-gradient(2px 2px at 18% 45%, rgba(255,255,255,.35) 99%, transparent),
+    radial-gradient(2px 2px at 72% 58%, rgba(255,255,255,.28) 99%, transparent),
+    radial-gradient(2px 2px at 92% 82%, rgba(255,255,255,.22) 99%, transparent);
+
+  opacity:.8;
+  animation: twinkle 6s ease-in-out infinite;
+}
+
+@keyframes twinkle{
+  0%,100%{ opacity:.6; }
+  50%{ opacity:1; }
 }
 
 /* NAVBAR */
@@ -110,6 +157,7 @@ h1{
   border:1px solid var(--line);
   border-radius: 18px;
   box-shadow: 0 14px 30px rgba(0,0,0,.25);
+  backdrop-filter: blur(10px);
 }
 
 h2{
