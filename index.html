@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jackson Herisse | Portfolio</title>
+<link rel="stylesheet" href="style.css">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jackson Herisse | Portfolio</title>
@@ -9,6 +13,56 @@
 
 <body>
 
+<nav class="navbar">
+<div class="brand">JH</div>
+<div class="navlinks">
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<header class="hero">
+<div class="hero-inner">
+<h1>Jackson Herisse</h1>
+<p class="subtitle">Cybersecurity & Cloud | Florida State University</p>
+
+<div class="hero-actions">
+<a class="btn primary" href="#projects">View Projects</a>
+<a class="btn" href="#contact">Contact</a>
+</div>
+</div>
+</header>
+
+<main class="wrap">
+
+<section id="about" class="card">
+<h2>About</h2>
+<p>
+I am a graduate student at Florida State University pursuing a Master of Science in Information Technology
+with a focus on cybersecurity. I’m interested in cloud security engineering, incident response, and building
+practical security labs.
+</p>
+</section>
+
+<section id="projects" class="card">
+  <h2>Projects</h2>
+
+  <div class="grid projects-grid">
+
+    <!-- Project 1 -->
+    <article class="tile">
+      <h3>Network Traffic Analysis & Anomaly Detection</h3>
+      <p>Captured and analyzed traffic using Security Onion/Wireshark and documented suspicious patterns.</p>
+      <p class="meta">Tools: Zeek, Suricata, Wireshark</p>
+      <a class="btn small" href="#" target="_blank" rel="noreferrer">View</a>
+    </article>
+
+    <!-- Project 2 (Embedded image card) -->
+    <article class="pCard">
+      <div class="pMedia">
+        <img src="./asset/Org-info-sec-thumb.png" alt="Organization Information Security Project preview">
   <nav class="navbar">
     <div class="nav-inner">
       <a class="brand" href="#top" aria-label="Home">
@@ -20,7 +74,7 @@
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#contact" class="nav-cta">Contact</a>
-      </div>
+</div>
     </div>
   </nav>
 
@@ -132,125 +186,47 @@
     </section>
 
     <!-- SKILLS -->
-    <section id="skills" class="card skills-panel">
-  <div class="skills-head">
-    <div>
-      <p class="skills-kicker">CAPABILITIES</p>
-      <h2 class="skills-title">Skills & Tools</h2>
-    </div>
+    <section id="skills" class="card">
+      <div class="card-head">
+        <h2>Skills</h2>
+        <p class="card-sub">Tools, platforms, and security domains I work with.</p>
+      </div>
 
-    <div class="skills-status">
-      <span class="skills-dot"></span>
-      <span>AVAILABLE</span>
-    </div>
-  </div>
+      <div class="chips">
+        <span class="chip">Java</span>
+        <span class="chip">PowerShell</span>
+        <span class="chip">SQL</span>
+        <span class="chip">HTML</span>
+        <span class="chip">CSS</span>
+        <span class="chip">Azure</span>
+        <span class="chip">Linux</span>
+        <span class="chip">Zero Trust</span>
+        <span class="chip">Palo Alto</span>
+        <span class="chip">CrowdStrike</span>
+        <span class="chip">Security Onion</span>
+        <span class="chip">Zeek</span>
+        <span class="chip">Suricata</span>
+        <span class="chip">SIEM</span>
+        <span class="chip">Incident Response</span>
+        <span class="chip">Threat Hunting</span>
+        <span class="chip">Vulnerability Management</span>
+        <span class="chip">IAM</span>
+        <span class="chip">IDS/IPS</span>
+        <span class="chip">Wireshark</span>
+      </div>
+    </section>
 
-  <!-- LANGUAGES -->
-  <div class="skills-group">
-    <div class="skills-group-head">
-      <p class="skills-group-title">Languages</p>
-      <p class="skills-group-count">7 tools</p>
-    </div>
+      <div class="pBody">
+        <h3>Cloud Security Lab (Azure)</h3>
+        <p>Built a cloud lab with Linux/Windows VMs, secure access, and basic monitoring.</p>
+        <p class="meta">Tools: Azure, Linux, IAM</p>
 
-    <div class="skills-grid">
-      <div class="skill-pill">
-        <img class="skill-icon" src="./icons/python.svg" alt="" />
-        <span>Python</span>
-      </div>
-      <div class="skill-pill">
-        <img class="skill-icon" src="./icons/powershell.svg" alt="" />
-        <span>PowerShell</span>
-      </div>
-      <div class="skill-pill">
-        <img class="skill-icon" src="./icons/java.svg" alt="" />
-        <span>Java</span>
-      </div>
-      <div class="skill-pill">
-        <img class="skill-icon" src="./icons/sql.svg" alt="" />
-        <span>SQL</span>
-      </div>
-      <div class="skill-pill">
-        <img class="skill-icon" src="./icons/bash.svg" alt="" />
-        <span>Bash</span>
-      </div>
-      <div class="skill-pill">
-        <img class="skill-icon" src="./icons/javascript.svg" alt="" />
-        <span>JavaScript</span>
-      </div>
-      <div class="skill-pill">
-        <img class="skill-icon" src="./icons/html5.svg" alt="" />
-        <span>HTML/CSS</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- SECURITY TOOLS -->
-  <div class="skills-group">
-    <div class="skills-group-head">
-      <p class="skills-group-title">Security Tools</p>
-      <p class="skills-group-count">6 tools</p>
-    </div>
-
-    <div class="skills-grid">
-      <div class="skill-pill">
-        <img class="skill-icon" src="./icons/kali.svg" alt="" />
-        <span>Kali Linux</span>
-      </div>
-      <div class="skill-pill">
-        <img class="skill-icon" src="./icons/wireshark.svg" alt="" />
-        <span>Wireshark</span>
-      </div>
-      <div class="skill-pill">
-        <img class="skill-icon" src="./icons/securityonion.svg" alt="" />
-        <span>Security Onion</span>
-      </div>
-      <div class="skill-pill">
-        <img class="skill-icon" src="./icons/zeek.svg" alt="" />
-        <span>Zeek</span>
-      </div>
-      <div class="skill-pill">
-        <img class="skill-icon" src="./icons/suricata.svg" alt="" />
-        <span>Suricata</span>
-      </div>
-      <div class="skill-pill">
-        <img class="skill-icon" src="./icons/crowdstrike.svg" alt="" />
-        <span>CrowdStrike</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- CLOUD & INFRA -->
-  <div class="skills-group">
-    <div class="skills-group-head">
-      <p class="skills-group-title">Cloud & Infrastructure</p>
-      <p class="skills-group-count">5 platforms</p>
-    </div>
-
-    <div class="skills-grid">
-      <div class="skill-pill">
-        <img class="skill-icon" src="./icons/azure.svg" alt="" />
-        <span>Azure</span>
-      </div>
-      <div class="skill-pill">
-        <img class="skill-icon" src="./icons/iam.svg" alt="" />
-        <span>IAM</span>
-      </div>
-      <div class="skill-pill">
-        <img class="skill-icon" src="./icons/zerotrust.svg" alt="" />
-        <span>Zero Trust</span>
-      </div>
-      <div class="skill-pill">
-        <img class="skill-icon" src="./icons/paloalto.svg" alt="" />
-        <span>Palo Alto</span>
-      </div>
-      <div class="skill-pill">
-        <img class="skill-icon" src="./icons/siem.svg" alt="" />
-        <span>SIEM</span>
-      </div>
-    </div>
-  </div>
-</section>
-
+        <div class="pBtns">
+          <a class="btn primary small"
+             href="./asset/Organization%20Information%20Security%20Project.pdf"
+             target="_blank"
+             rel="noopener noreferrer">
+            View Slides
     <!-- CONTACT -->
     <section id="contact" class="card contact">
       <div class="card-head">
@@ -275,10 +251,83 @@
           <p class="label">GitHub</p>
           <a href="http://jackson-builds.github.io/Portfolio/" target="_blank" rel="noreferrer">
             jackson-builds.github.io/Portfolio
-          </a>
-        </div>
-      </div>
+</a>
+</div>
+</div>
+    </article>
 
+    <!-- Project 3 -->
+    <article class="tile">
+      <h3>Zero Trust Architecture Research</h3>
+      <p>Studied identity-driven access control and segmentation to reduce blast radius.</p>
+      <p class="meta">Focus: IAM, device posture, segmentation</p>
+      <a class="btn small" href="#" target="_blank" rel="noreferrer">View</a>
+    </article>
+
+  </div>
+
+  <p class="hint">Replace the “View” links with your GitHub, Google Docs, PDFs, or class pages.</p>
+</section>
+      
+    
+<section id="skills" class="card">
+<h2>Skills</h2>
+<div class="chips">
+<span class="chip">Java</span>
+<span class="chip">Powershell</span>
+<span class="chip">SQL</span>
+<span class="chip">HTML</span>
+<span class="chip">CSS</span>
+<span class="chip">Azure</span>
+<span class="chip">Linux</span>
+<span class="chip">Zero Trust</span>
+<span class="chip">Palo Alto</span>
+<span class="chip">Crowdstrike</span>
+<span class="chip">Security Onion</span>
+<span class="chip">Zeek</span>
+<span class="chip">Suricata</span>
+<span class="chip">SIEM</span>
+<span class="chip">Incident Response</span>
+<span class="chip">Threat Hunting</span>
+<span class="chip">Vulernability Management</span>
+<span class="chip">IAM</span>
+<span class="chip">IDS/IPS</span>
+<span class="chip">Wireshark</span>
+</div>
+</section>
+
+<section id="contact" class="card">
+<h2>Contact</h2>
+
+<div class="contact-grid">
+<div>
+<p class="label">Email</p>
+<a href="mailto:jh20a@fsu.edu">jh20a@fsu.edu</a>
+</div>
+
+<div>
+<p class="label">LinkedIn</p>
+<a href="https://www.linkedin.com/in/jackson-herisse/" target="_blank" rel="noopener noreferrer">LinkedIn</a>       
+</div>
+
+<div>
+<p class="label">GitHub</p>
+<a href="http://jackson-builds.github.io/Portfolio/" target="_blank" rel="noreferrer">Portfolio</a>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer class="foot">
+<p>© <span id="year"></span> Jackson Herisse</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
       <div class="cta">
         <div>
           <h3>Let’s connect.</h3>
@@ -288,6 +337,7 @@
       </div>
     </section>
 
+</html>
   </main>
 
   <footer class="foot">
@@ -303,6 +353,3 @@
 
 </body>
 </html>
-
-
-
